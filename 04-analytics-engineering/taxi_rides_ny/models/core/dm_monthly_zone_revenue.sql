@@ -19,12 +19,12 @@ with trips_data as (
     sum(ehail_fee) as revenue_monthly_ehail_fee,
     sum(improvement_surcharge) as revenue_monthly_improvement_surcharge,
     sum(total_amount) as revenue_monthly_total_amount,
-    count(*) as num_records
 
     -- Additional calculations
     count(tripid) as total_monthly_trips,
     avg(passenger_count) as avg_monthly_passenger_count,
-    avg(trip_distance) as avg_monthly_trip_distance
+    avg(trip_distance) as avg_monthly_trip_distance,
+    count(*) as num_records
 
     from trips_data
     group by 1,2,3
