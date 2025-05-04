@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: staging
+    # database: postgres-zoomcamp
+    # schema: public
+    database: "{{ env_var('DBT_DATABASE', 'postgres-zoomcamp') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'public') }}"
+
+    tables:
+    - name: coop_da_capstone_data
+    
